@@ -16,3 +16,5 @@ svets/.env
 ppercy/.cache
 ppercy/node_modules/
 ppercy/.env
+core/target/
+target/
