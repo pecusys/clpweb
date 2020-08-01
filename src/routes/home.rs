@@ -21,28 +21,16 @@ impl Component for Home {
 
     fn view(&self) -> Html {
         html! {
-            <div class="app">
-                <header class="app-header">
-                    <a
-                        class="app-logo"
-                        href="https://yew.rs"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                    </a>
-                    <p>
-                        { "Edit " } <code>{ "src/routes/home.rs" }</code> { " and save to reload." }
-                    </p>
-                    <a
-                        id="learn_yew"
-                        class="app-link"
-                        href="https://yew.rs"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        { "Learn Yew" }
-                    </a>
-                </header>
+            <div class="content home">
+                <h1>{ "Home" }</h1>
+                <h3>{ "Welcome to chris.pecunies.com" } </h3>
+                <p> { "This will be my forseeable website and portal to other things, for the time being" } </p>
+                <a href="https://github.com/pecusys">
+                <br/><br/>
+                <button
+                        type="submit"
+                        >{" GitHub " }</button>
+                </a>
             </div>
         }
     }

@@ -12,5 +12,8 @@
     "parcel-plugin-wasm.rs": "^1.2.16",
     "sass": "^1.24.2",
     "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "marked": "^1.1.1"
   }
 }

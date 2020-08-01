@@ -26,8 +26,41 @@ impl Component for Nav {
         html! {
             <nav>
                 <ul>
-                    <li><RouterAnchor<AppRoute> route=AppRoute::Home classes="app-link" >{ "Home" }</RouterAnchor<AppRoute>></li>
-                    <li><RouterAnchor<AppRoute> route=AppRoute::About classes="app-link">{ "About" }</RouterAnchor<AppRoute>></li>
+                    <li class="site-title nav-item">
+                        //<img src="bookmark-regular.svg"/>
+                        { "chris.p" }
+                    </li>
+                    <li class="nav-item"><RouterAnchor<AppRoute> route=AppRoute::Home classes="app-link" >{ "Home" }</RouterAnchor<AppRoute>></li>
+                    <li class="nav-item"><RouterAnchor<AppRoute> route=AppRoute::About classes="app-link">{ "About" }</RouterAnchor<AppRoute>></li>
+                    <li class="nav-item">
+                        <RouterAnchor<AppRoute> route=AppRoute::Contact classes="app-link">{ "Contact" }</RouterAnchor<AppRoute>>
+                    </li>
+                    <li class="nav-item">
+                        <RouterAnchor<AppRoute> route=AppRoute::Projects classes="app-link">{ "Projects" }</RouterAnchor<AppRoute>>
+                    </li>
+                    <li class="nav-item">
+                        <RouterAnchor<AppRoute> route=AppRoute::Blog classes="app-link">{ "Blog" }</RouterAnchor<AppRoute>>
+                    </li>
+                    <li class="nav-right-link">
+                        <a
+                            href="https://github.com/pecusys"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                        //<img src="../../static/github-brands.svg"/>
+                        {"GitHub"}
+                        </a>
+                    </li>
+                    <li class="nav-right-link">
+                        <a
+                            href="https://github.com/pecusys"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                        //<img src="../../static/linkedin-in-brands.svg"/>
+                        { "linkedIn" }
+                        </a>
+                    </li>
                 </ul>
             </nav>
         }
