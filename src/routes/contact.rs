@@ -24,9 +24,6 @@ impl Component for Contact {
         html! {
             <div class="content contact">
                 <h1>{"Contact"}</h1>
-                <p>
-                    { "Ways to contact me:" }
-                </p>
                     <ContactForm/>
             </div>
         }

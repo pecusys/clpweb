@@ -65,8 +65,9 @@ impl Component for ContactForm {
             html! {
                 <contactform>
                     <form>
-                        <fieldset>
+                        <div class="info-box">
                             <legend><h3>{"Contact me!"}</h3></legend>
+                            <p>{ " Send me some advice, or reach out to me" }</p>
                             <div>
                                 <p>{ "Your name: " }</p>
                                 <input class="name"
@@ -92,7 +93,7 @@ impl Component for ContactForm {
                                     disabled=self.submitted>
                                     {" Submit" }
                             </button>
-                        </fieldset>
+                        </div>
                     </form>
                 </contactform>
             }

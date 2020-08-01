@@ -93,6 +93,7 @@ nav li:hover {
 
 .site-title {
   margin-right: 5vw;
+  font-stretch: expanded;
 }
 
 .app-link {
@@ -199,17 +200,17 @@ contact {
   align-content: center;
 }
 
-contactform fieldset {
-  margin: auto;
-  padding-bottom: 40px;
-  margin-bottom: 20px;
-  background-color: #282a2e;
-  max-width: 40vw;
+contactform p {
   text-shadow: 0px -1px 0px #000;
 }
 
-contactform p {
-  text-shadow: 0px -1px 0px #000;
+.info-box {
+  background-color: rgba(0, 0, 0, 0.1);
+  text-shadow: 0px -2px 0px #000;
+  padding: 20px 30px 20px 30px;
+  border: 1px solid #61dafb;
+  border-radius: 8px;
+  box-shadow: 1.5px 1.5px 2px #000;
 }
 
 /*# sourceMappingURL=/styles.164d45a1.css.map */
