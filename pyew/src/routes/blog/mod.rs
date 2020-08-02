@@ -2,16 +2,18 @@ pub mod home;
 pub mod blog_post;
 pub mod posts;
 pub mod posts_by_year;
+pub mod posts_by_month;
 
 use yew::prelude::*;
 use yew_router::prelude::*;
 use yew_router::switch::Permissive;
 
 pub use home::BlogHome;
-pub use crate::routes::BlogRoute;
+pub use crate::routes::{BlogRoute, AppRoute};
 pub use crate::components::BlogNav;
 pub use posts::Posts;
 pub use posts_by_year::PostsByYear;
+pub use posts_by_month::PostsByMonth;
 pub use blog_post::BlogPost;
 
 pub struct Blog;
@@ -37,21 +39,7 @@ impl Component for Blog {
             <blog>
             <div class="content blog">
                 <BlogNav />
-                <Router<BlogRoute, ()>
-                    render = Router::render(|switch: BlogRoute | {
-                        match switch {
-                            BlogRoute::Home => html!{ <BlogHome /> },
-                            BlogRoute::Posts => html!{ <Posts /> },
-                            BlogRoute::PostsByYear{year: 20} => html!{ <PostsByYear /> },
-                            //BlogRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
-                            //BlogRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)},
-                            _ => html!{format!("whatevs")},
-                        }
-                    } )
-                    redirect = Router::redirect(|route: Route<()>| {
-                        BlogRoute::PageNotFound(Permissive(Some(route.route)))
-                    })
-                />
+                <BlogHome/>
             </div>
             </blog>
         }

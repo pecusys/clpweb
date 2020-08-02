@@ -1,7 +1,7 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use crate::routes::blog::BlogRoute;
+use crate::routes::{AppRoute, BlogRoute};
 
 /// BlogNav component
 pub struct BlogNav;
@@ -27,25 +27,30 @@ impl Component for BlogNav {
             <div class="subnav-or blognav">
                 <ul>
                     <li class="BlogNav-item">
-                        <RouterAnchor<BlogRoute> 
-                            route=BlogRoute::Home 
+                        <RouterAnchor<AppRoute> 
+                            route=AppRoute::Blog(BlogRoute::Home)
                             classes="app-link">
                             { "Blog Home" }
-                        </RouterAnchor<BlogRoute>>
+                        </RouterAnchor<AppRoute>>
                     </li>
                     <li class="BlogNav-item">
-                        <RouterAnchor<BlogRoute> 
-                            route=BlogRoute::Posts 
+                        <RouterAnchor<AppRoute> 
+                            route=AppRoute::Blog(BlogRoute::Posts)
                             classes="app-link">
                             { "Posts" }
-                        </RouterAnchor<BlogRoute>>
+                        </RouterAnchor<AppRoute>>
                     </li>
+                    //<li class="BlogNav-item">
+                        //<RouterAnchor<BlogRoute> 
+                            //route=BlogRoute::PostsByYear { year: 20 }
+                            //classes="app-link">
+                            //{ "Posts by year" }
+                        //</RouterAnchor<BlogRoute>>
+                    //</li>
                     <li class="BlogNav-item">
-                        <RouterAnchor<BlogRoute> 
-                            route=BlogRoute::PostsByYear { year: 20 }
-                            classes="app-link">
-                            { "Posts by year" }
-                        </RouterAnchor<BlogRoute>>
+                        <a href="#">
+                            { "Item 4" }
+                        </a>
                     </li>
                 </ul>
             </div>

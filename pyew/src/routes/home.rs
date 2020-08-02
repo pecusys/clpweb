@@ -23,8 +23,8 @@ impl Component for Home {
         html! {
             <div class="content home">
                 <h1>{ "Hi there!" }</h1>
-                <h3>{ "Welcome to my (Chris P)'s website!" } </h3>
-                <p> { "This is where I'll host my projects, life progress, experiments, whatever the case may be!" } </p>
+                <h3>{ "You've made it to Chris P's evil lair!" } </h3>
+                <p> { "Just goofin! This is a Rust + WASM portfolio/blog/hub to showcase projects I'm involved in. " } </p>
                 <p> { "Come check back later!" } </p>
                 <br/><br/>
                 <div class="info-box-or">

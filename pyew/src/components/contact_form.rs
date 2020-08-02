@@ -71,21 +71,23 @@ impl Component for ContactForm {
                             <div>
                                 <p>{ "Your name: " }</p>
                                 <input class="name"
-                                       placeholder="Your name"
-                                       value=&self.name/>
+                                    placeholder="Name"
+                                    value=&self.name/>
                             </div>
                             <div>
                                 <p>{ "Your email: " }</p>
                                 <input class="name"
-                                       placeholder="Your email"
-                                       value=&self.email/>
+                                    type="email"
+                                    placeholder="Email"
+                                    value=&self.email/>
                             </div>
                             <div>
                                 <p>{ "Your feedback: " }</p>
-                                <input class="feedback"
-                                       type="text-box"
-                                       placeholder="Your comments/feedback/queries"
-                                       value=self.text_data/>
+                                <textarea class="feedback"
+                                    rows="4"
+                                    cols="32"
+                                    placeholder="Your comments/feedback/queries"
+                                    value=self.text_data/>
                             </div>
                             <br/><br/>
                             <button

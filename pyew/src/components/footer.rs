@@ -25,8 +25,34 @@ impl Component for Footer {
     fn view(&self) -> Html {
         html! {
             <div class="footer">
-                <p>{ "Home - About - Contact"}</p>
-                <p>{ "© 2020, Chris Pecunies -- or something like that" }</p>
+                <p>{ "© 2020, Chris Pecunies - or something like that. It's not much, but I made it!" }</p>
+                <p>
+                    <RouterAnchor<AppRoute> 
+                        route=AppRoute::Home 
+                        classes="app-link" >
+                        { "Home - " } 
+                    </RouterAnchor<AppRoute>>
+                    <RouterAnchor<AppRoute> 
+                        route=AppRoute::About 
+                        classes="app-link" >
+                        { "About - " }
+                    </RouterAnchor<AppRoute>>
+                    <RouterAnchor<AppRoute> 
+                        route=AppRoute::Contact 
+                        classes="app-link" >
+                        { "Contact - " }
+                    </RouterAnchor<AppRoute>>
+                    <RouterAnchor<AppRoute> 
+                        route=AppRoute::Contact 
+                        classes="app-link" >
+                        { "Projects - " }
+                    </RouterAnchor<AppRoute>>
+                    <RouterAnchor<AppRoute> 
+                        route=AppRoute::Contact 
+                        classes="app-link" >
+                        { "Blog" }
+                    </RouterAnchor<AppRoute>>
+                </p>
                 <p>{ "I am a footer footy footy foot" }</p>
             </div>
         }

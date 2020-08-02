@@ -28,10 +28,10 @@ pub enum AppRoute {
     About,
     #[to = "/contact"]
     Contact,
-    #[to = "/blog"]
-    Blog,
-    #[to = "/projects"]
-    Projects,
+    #[to = "/blog{*}"]
+    Blog(BlogRoute),
+    #[to = "/projects{*}"]
+    Projects(ProjectsRoute),
     #[to = "/page-not-found"]
     PageNotFound(Permissive<String>),
     #[to = "/"]
@@ -41,14 +41,29 @@ pub enum AppRoute {
 /// Blog routes
 #[derive(Switch, Debug, Clone)]
 pub enum BlogRoute {
-    #[to = "/blog/posts"]
+    #[to = "/posts"]
     Posts,
-    #[to = "/blog/{year}"]
-    PostsByYear { year: u32 },
-    #[to = "/blog/{year}/{slug}"]
-    BlogPost {year: u32, slug: String},
-    #[to = "/blog/post-not-found"]
+    //#[to = "/{year}"]
+    //PostsByYear { year: u32 },
+    //#[to = "/{year}"]
+    //PostsByMonth { year: u32, month: u32 },
+    //#[to = "/{year}/{month}/{slug}"]
+    //BlogPost {year: u32, month: u32, slug: String},
+    #[to = "/post-not-found"]
     PageNotFound(Permissive<String>),
-    #[to = "/blog"]
+    #[to = "/"]
+    Home,
+}
+
+/// Projects routes
+#[derive(Switch, Debug, Clone)]
+pub enum ProjectsRoute {
+    #[to = "/charts"]
+    Charts,
+    #[to = "/portfolio"]
+    Portfolio,
+    #[to = "/post-not-found"]
+    PageNotFound(Permissive<String>),
+    #[to = "/"]
     Home,
 }

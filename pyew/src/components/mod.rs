@@ -4,6 +4,7 @@ pub mod code;
 pub mod blog_list;
 pub mod blog_post;
 pub mod blog_nav;
+pub mod projects_nav;
 pub mod navlink;
 pub mod contact_form;
 

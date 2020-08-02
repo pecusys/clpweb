@@ -1,15 +1,15 @@
 use yew::prelude::*;
-pub use crate::components::BlogNav;
+use crate::components::projects_nav::ProjectsNav;
 
-/// Posts page
-pub struct Posts;
+/// Projects page
+pub struct Portfolio;
 
-impl Component for Posts {
+impl Component for Portfolio {
     type Message = ();
     type Properties = ();
 
     fn create(_: Self::Properties, _: ComponentLink<Self>) -> Self {
-        Posts {}
+        Portfolio {}
     }
 
     fn change(&mut self, _: Self::Properties) -> ShouldRender {
@@ -22,11 +22,10 @@ impl Component for Posts {
 
     fn view(&self) -> Html {
         html! {
-            <div class="content blog-home">
-                <BlogNav/>
-                <h1>{ "Blog Posts" } </h1>
-                <h3>{ "This is the blog posts directory" } </h3>
-                <p> { "Lorem ipsum and whatnot" } </p>
+            <div class="content projects">
+                <ProjectsNav/>
+                <h1>{ "Portfolio" }</h1>
+                <h3>{ "Where I will display, explain, and link to external projects I've worked on / made" } </h3>
             </div>
         }
     }

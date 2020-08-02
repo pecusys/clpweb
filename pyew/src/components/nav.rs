@@ -1,7 +1,7 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use crate::routes::AppRoute;
+use crate::routes::{AppRoute, BlogRoute, ProjectsRoute};
 
 /// Nav component
 pub struct Nav;
@@ -28,7 +28,8 @@ impl Component for Nav {
                 <ul>
                     <li class="site-title nav-item">
                         //<img src="bookmark-regular.svg"/>
-                        { "chris.p" }
+                        { "⛨  chris.p  ⛨" }
+                        //{ "❮❮ chris.p ❯❯" }
                     </li>
                     <li class="nav-item">
                         <RouterAnchor<AppRoute> 
@@ -49,13 +50,13 @@ impl Component for Nav {
                     </li>
                     <li class="nav-item">
                         <RouterAnchor<AppRoute> 
-                        route=AppRoute::Projects classes="app-link">
+                        route=AppRoute::Projects(ProjectsRoute::Home) classes="app-link">
                         { "Projects" }
                         </RouterAnchor<AppRoute>>
                     </li>
                     <li class="nav-item">
                         <RouterAnchor<AppRoute> 
-                        route=AppRoute::Blog classes="app-link">
+                        route=AppRoute::Blog(BlogRoute::Home) classes="app-link">
                         { "Blog" }
                         </RouterAnchor<AppRoute>>
                     </li>

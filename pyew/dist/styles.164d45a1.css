@@ -203,6 +203,11 @@ nav li:hover {
   text-shadow: 0px -2px 0px #000;
 }
 
+.footer .app-link {
+  color: rgba(230, 190, 150, 0.6);
+  text-shadow: 0px -2px 0px #000;
+}
+
 @keyframes modal {
   0% {
     transform: scale(0);

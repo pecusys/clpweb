@@ -1,5 +1,7 @@
 use yew::prelude::*;
 
+pub use crate::components::BlogNav;
+
 /// BlogHome page
 pub struct BlogHome;
 
@@ -22,9 +24,12 @@ impl Component for BlogHome {
     fn view(&self) -> Html {
         html! {
             <div class="content blog-home">
+                <BlogNav/>
                 <h1>{ "Blog Home" } </h1>
                 <h3>{ "Welcome to the blog" } </h3>
                 <p> { "This is the index page" } </p>
+                <p> { "Jeez yew-router is difficult to figure out, I'll get the hang of it though!" } </p>
+                <p> { "Jeez yew-router is difficult to figure out, I'll get the hang of it though!" } </p>
             </div>
         }
     }
