@@ -46,7 +46,7 @@ pub enum BlogRoute {
     #[to = "/blog/{year}"]
     PostsByYear { year: u32 },
     #[to = "/blog/{year}/{slug}"]
-    BlogPost {year: u32, month: u32, slug: String},
+    BlogPost {year: u32, slug: String},
     #[to = "/blog/post-not-found"]
     PageNotFound(Permissive<String>),
     #[to = "/blog"]

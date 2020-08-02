@@ -24,7 +24,7 @@ impl Component for BlogNav {
 
     fn view(&self) -> Html {
         html! {
-            <div class="subnav-bl blognav">
+            <div class="subnav-or blognav">
                 <ul>
                     <li class="BlogNav-item">
                         <RouterAnchor<BlogRoute> 

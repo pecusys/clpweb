@@ -28,7 +28,7 @@ impl Component for Nav {
                 <ul>
                     <li class="site-title nav-item">
                         //<img src="bookmark-regular.svg"/>
-                        { "chris_p" }
+                        { "chris.p" }
                     </li>
                     <li class="nav-item">
                         <RouterAnchor<AppRoute> 

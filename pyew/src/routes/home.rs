@@ -27,26 +27,26 @@ impl Component for Home {
                 <p> { "This is where I'll host my projects, life progress, experiments, whatever the case may be!" } </p>
                 <p> { "Come check back later!" } </p>
                 <br/><br/>
-                <div class="info-box-bl">
+                <div class="info-box-or">
                 <p>{"Check out my GitHub: "}</p>
                 <p><a href="https://github.com/pecusys">
                 <button
                         type="submit"
-                        class="blue-btn"
+                        class="button-or"
                         >{" GitHub " }</button>
                 </a></p>
                 <p>{"Or my old design for a personal website (ew): "}</p>
                 <p><a href="https://im.chrisp.cc">
                 <button
                         type="submit"
-                        class="blue-btn"
+                        class="button-or"
                         >{" old site " }</button>
                 </a></p>
                 <p>{"Or a CRUD full stack app I'm working on: "}</p>
                 <p><a href="https://dev.memr.is">
                 <button
                         type="submit"
-                        class="blue-btn"
+                        class="button-or"
                         >{" div.is " }</button>
                 </a></p>
                 </div>

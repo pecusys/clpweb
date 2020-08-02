@@ -43,8 +43,8 @@ impl Component for Blog {
                             BlogRoute::Home => html!{ <BlogHome /> },
                             BlogRoute::Posts => html!{ <Posts /> },
                             BlogRoute::PostsByYear{year: 20} => html!{ <PostsByYear /> },
-                            BlogRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
-                            BlogRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)},
+                            //BlogRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
+                            //BlogRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)},
                             _ => html!{format!("whatevs")},
                         }
                     } )

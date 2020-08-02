@@ -124,17 +124,20 @@ nav li:hover {
 
 .site-title {
   margin-right: 5vw;
-  font-stretch: expanded;
+  font-stretch: ultra-expanded;
+  font-size: 1.1rem;
+  text-shadow: 2px 2px 2px #000;
+  font-weight: 400;
 }
 
 .app-link {
-  color: #61dafb;
-  font-weight: 400;
+  color: #ffca90;
+  font-weight: 380;
   text-shadow: 0px 1px 2px black;
 }
 
 .app-link:hover {
-  color: #509adf;
+  color: #df9a50;
 }
 
 .nav-right-link {
@@ -191,7 +194,7 @@ nav li:hover {
 .footer {
   background-color: #1f242a;
   border-top: 1px solid #525358;
-  box-shadow: 0px -1px 0px #000000;
+  box-shadow: 0px -2px 0px #1d1d1d;
   font-weight: 400;
 }
 
