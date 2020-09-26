@@ -23,8 +23,8 @@ impl Component for Home {
         html! {
             <div class="content home">
                 <h1>{ "Hi there!" }</h1>
-                <h3>{ "You've made it to Chris P's evil lair!" } </h3>
-                <p> { "Just goofin! This is a Rust + WASM portfolio/blog/hub to showcase projects I'm involved in. " } </p>
+                <h3>{ "Welcome" } </h3>
+                <p> { "Currently working on this website, built with Rust/WASM/Yew" } </p>
                 <p> { "Come check back later!" } </p>
             </div>
         }
